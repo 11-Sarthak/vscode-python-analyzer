@@ -1,4 +1,3 @@
-import sys
 import os
 import json
 import subprocess
@@ -82,7 +81,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python analyze_functions.py <directory_path>", file=sys.stderr)
         sys.exit(1)
-    
     directory_path = sys.argv[1]
     results = run_bandit_analysis(directory_path)
     print(json.dumps(results))  # Only this prints to stdout!
